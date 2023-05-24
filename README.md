@@ -37,11 +37,10 @@ catkin_make
 ```
 
 ## Usage
-First, start the USB camera drivers for both cameras. Replace /dev/video0 and /dev/video1 with the device paths for your cameras:
+First, start the USB camera drivers for both cameras. You can use the file usb_cam_sync.launch inside the launch folder, note that you should change params "video_device" to represent the device paths for your cameras.
 
 ```bash
-roslaunch usb_cam usb_cam.launch video_device:=/dev/video0 camera_name:=usb_cam1 image_topic:=image_raw
-roslaunch usb_cam usb_cam.launch video_device:=/dev/video1 camera_name:=usb_cam2 image_topic:=image_raw
+roslaunch launch/usb_cam_sync.launch
 ```
 
 Next, start the sync_cameras node:
