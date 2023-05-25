@@ -1,2 +1,4 @@
 .vscode/
 *.save
+scripts/data/
+**/__pycache__/
